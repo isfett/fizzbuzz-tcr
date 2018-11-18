@@ -48,8 +48,8 @@ class FizzBuzzTest extends TestCase
     /**
      * @return void
      */
-    public function testThreeEqualsThree(): void
+    public function testThreeEqualsFizz(): void
     {
-        $this->assertEquals('3', $this->fizzBuzz->process(3));
+        $this->assertEquals('Fizz', $this->fizzBuzz->process(3));
     }
 }

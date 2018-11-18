@@ -11,6 +11,9 @@ class FizzBuzz implements FizzBuzzInterface
 {
     public function process(int $input): string
     {
+        if ($input === 3) {
+            return 'Fizz';
+        }
         return (string)$input;
     }
 }
