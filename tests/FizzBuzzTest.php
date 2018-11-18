@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use App\FizzBuzz;
-use App\FizzBuzzInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
