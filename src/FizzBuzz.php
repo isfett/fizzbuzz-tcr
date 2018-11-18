@@ -9,6 +9,10 @@ namespace App;
  */
 class FizzBuzz implements FizzBuzzInterface
 {
+    /**
+     * @param int $input
+     * @return string
+     */
     public function process(int $input): string
     {
         if ($input % 3 === 0) {
