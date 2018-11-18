@@ -21,6 +21,10 @@ class FizzBuzz implements FizzBuzzInterface
      */
     public function process(int $input): string
     {
+        if ($input < 1) {
+            throw new \OutOfRangeException('Number of input has to be greater than zero!');
+        }
+
         $output = '';
 
         if ($this->divisibleBy($input, self::DIVISOR_FIZZ)) {

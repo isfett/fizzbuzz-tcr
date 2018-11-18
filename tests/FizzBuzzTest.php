@@ -72,4 +72,14 @@ class FizzBuzzTest extends TestCase
     {
         $this->assertEquals($expectedResult, $this->fizzBuzz->process($input));
     }
+
+    /**
+     * @return void
+     */
+    public function testFizzBuzzThrowsExceptionWhenNumberLowerThanOne(): void
+    {
+        $this->expectException(\OutOfRangeException::class);
+
+        $this->fizzBuzz->process(0);
+    }
 }
