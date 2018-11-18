@@ -11,7 +11,7 @@ class FizzBuzz implements FizzBuzzInterface
 {
     public function process(int $input): string
     {
-        if ($input === 3) {
+        if ($input % 3 === 0) {
             return 'Fizz';
         }
         if ($input === 5) {
