@@ -9,6 +9,12 @@ namespace App;
  */
 class FizzBuzz implements FizzBuzzInterface
 {
+    /** @var int */
+    private const DIVISOR_FIZZ = 3;
+
+    /** @var int */
+    private const DIVISOR_BUZZ = 5;
+
     /**
      * @param int $input
      * @return string
@@ -17,11 +23,11 @@ class FizzBuzz implements FizzBuzzInterface
     {
         $output = '';
 
-        if ($this->divisibleBy($input, 3)) {
+        if ($this->divisibleBy($input, self::DIVISOR_FIZZ)) {
             $output .= 'Fizz';
         }
 
-        if ($this->divisibleBy($input, 5)) {
+        if ($this->divisibleBy($input, self::DIVISOR_BUZZ)) {
             $output .= 'Buzz';
         }
 
