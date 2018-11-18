@@ -44,4 +44,12 @@ class FizzBuzzTest extends TestCase
     {
         $this->assertEquals('2', $this->fizzBuzz->process(2));
     }
+
+    /**
+     * @return void
+     */
+    public function testThreeEqualsThree(): void
+    {
+        $this->assertEquals('3', $this->fizzBuzz->process(3));
+    }
 }
