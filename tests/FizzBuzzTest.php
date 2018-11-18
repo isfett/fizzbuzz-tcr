@@ -13,6 +13,7 @@ use PHPUnit\Framework\TestCase;
  */
 class FizzBuzzTest extends TestCase
 {
+    /** @var FizzBuzz */
     private $fizzBuzz;
 
     /**
