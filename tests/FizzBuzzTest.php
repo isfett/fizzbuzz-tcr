@@ -52,4 +52,12 @@ class FizzBuzzTest extends TestCase
     {
         $this->assertEquals('Fizz', $this->fizzBuzz->process(3));
     }
+
+    /**
+     * @return void
+     */
+    public function testFourEqualsFour(): void
+    {
+        $this->assertEquals('4', $this->fizzBuzz->process(4));
+    }
 }
