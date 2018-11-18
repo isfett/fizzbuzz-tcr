@@ -14,7 +14,7 @@ class FizzBuzz implements FizzBuzzInterface
         if ($input % 3 === 0) {
             return 'Fizz';
         }
-        if ($input === 5) {
+        if ($input % 5 === 0) {
             return 'Buzz';
         }
         return (string)$input;
