@@ -43,7 +43,7 @@ class FizzBuzz implements FizzBuzzInterface
      * @param int $divisor
      * @return bool
      */
-    public function divisibleBy(int $input, int $divisor): bool
+    private function divisibleBy(int $input, int $divisor): bool
     {
         return $input % $divisor === 0;
     }
