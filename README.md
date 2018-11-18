@@ -33,5 +33,5 @@ This is a proof of concept in a small PHP Team to @KentBeck's TCR Workflow, have
 
 When we start, there will just be this command:
 ```
-./vendor/bin/phpunit && git add . && git commit -a -m 'wip' && git push || git reset HEAD --hard
+./vendor/bin/phpunit && git add . && git commit -a -m 'wip' && git pull --rebase && git push || git reset HEAD --hard
 ```
