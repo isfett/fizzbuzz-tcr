@@ -15,41 +15,33 @@ class FizzBuzzTest extends TestCase
 {
     private $fizzBuzz;
 
+    /**
+     *
+     */
     public function setUp()
     {
         parent::setUp();
         $this->fizzBuzz = new FizzBuzz();
     }
 
-    /**
-     * @return void
-     */
-    public function testFizzBuzzImplementsInterface(): void
+    public function provider(): array
     {
-        $this->assertInstanceOf(FizzBuzzInterface::class, $this->fizzBuzz);
+        return [
+            [1, '1'],
+            [2, '2'],
+            [3, 'Fizz'],
+        ];
     }
 
     /**
+     * @param int $input
+     * @param string $expectedResult
+     *
      * @return void
+     * @dataProvider provider
      */
-    public function testOneEqualsOne(): void
+    public function testFizzBuzz(int $input, string $expectedResult): void
     {
-        $this->assertEquals('1', $this->fizzBuzz->process(1));
-    }
-
-    /**
-     * @return void
-     */
-    public function testTwoEqualsTwo(): void
-    {
-        $this->assertEquals('2', $this->fizzBuzz->process(2));
-    }
-
-    /**
-     * @return void
-     */
-    public function testThreeEqualsFizz(): void
-    {
-        $this->assertEquals('Fizz', $this->fizzBuzz->process(3));
+        $this->assertEquals($expectedResult, $this->fizzBuzz->process($input));
     }
 }
