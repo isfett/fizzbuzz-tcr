@@ -30,6 +30,7 @@ class FizzBuzzTest extends TestCase
             [1, '1'],
             [2, '2'],
             [3, 'Fizz'],
+            [4, '4'],
         ];
     }
 
@@ -43,13 +44,5 @@ class FizzBuzzTest extends TestCase
     public function testFizzBuzz(int $input, string $expectedResult): void
     {
         $this->assertEquals($expectedResult, $this->fizzBuzz->process($input));
-    }
-
-    /**
-     * @return void
-     */
-    public function testFourEqualsFour(): void
-    {
-        $this->assertEquals('4', $this->fizzBuzz->process(4));
     }
 }
