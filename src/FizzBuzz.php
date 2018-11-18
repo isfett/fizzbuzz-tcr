@@ -11,6 +11,6 @@ class FizzBuzz implements FizzBuzzInterface
 {
     public function process(int $input): string
     {
-        return '';
+        return (string)$input;
     }
 }

@@ -28,4 +28,12 @@ class FizzBuzzTest extends TestCase
     {
         $this->assertInstanceOf(FizzBuzzInterface::class, $this->fizzBuzz);
     }
+
+    /**
+     * @return void
+     */
+    public function testOneEqualsOne(): void
+    {
+        $this->assertEquals('1', $this->fizzBuzz->process(1));
+    }
 }
