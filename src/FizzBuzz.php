@@ -17,14 +17,24 @@ class FizzBuzz implements FizzBuzzInterface
     {
         $output = '';
 
-        if ($input % 3 === 0) {
+        if ($this->divisibleBy($input, 3)) {
             $output .= 'Fizz';
         }
 
-        if ($input % 5 === 0) {
+        if ($this->divisibleBy($input, 5)) {
             $output .= 'Buzz';
         }
 
         return $output?:(string)$input;
+    }
+
+    /**
+     * @param int $input
+     * @param int $divisor
+     * @return bool
+     */
+    public function divisibleBy(int $input, int $divisor): bool
+    {
+        return $input % $divisor === 0;
     }
 }
