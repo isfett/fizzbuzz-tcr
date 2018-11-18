@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Tests;
 
+use App\FizzBuzz;
+use App\FizzBuzzInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -11,11 +13,19 @@ use PHPUnit\Framework\TestCase;
  */
 class FizzBuzzTest extends TestCase
 {
+    private $fizzBuzz;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->fizzBuzz = new FizzBuzz();
+    }
+
     /**
      * @return void
      */
-    public function testTrue(): void
+    public function testFizzBuzzImplementsInterface(): void
     {
-        $this->assertTrue(true);
+        $this->assertInstanceOf(FizzBuzzInterface::class, $this->fizzBuzz);
     }
 }
